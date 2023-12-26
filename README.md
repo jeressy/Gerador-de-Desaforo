@@ -1,6 +1,6 @@
 # Front-end para a API xinga.me
 
-Este projeto consiste em um front-end simples para a API xinga.me (https://github.com/leozz37/profanity). Abaixo, você encontrará as instruções para configurar e executar o projeto em sua máquina.
+Este projeto consiste em um front-end simples para a API xinga.me (https://github.com/alvarowolfx/xinga.me). Abaixo, você encontrará as instruções para configurar e executar o projeto em sua máquina.
 
 ![Print](https://cdn.discordapp.com/attachments/1082896001339240568/1189274002821218405/image.png?ex=659d90b9&is=658b1bb9&hm=399d357a399eac1a0ffda68e1f2d1288ab9e09cd5197ef29aca3e3fc1cdc04c0&)
 
