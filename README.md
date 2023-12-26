@@ -4,66 +4,44 @@ Este projeto consiste em um front-end simples para a API xinga.me (https://githu
 
 ![Print](https://cdn.discordapp.com/attachments/1082896001339240568/1189274002821218405/image.png?ex=659d90b9&is=658b1bb9&hm=399d357a399eac1a0ffda68e1f2d1288ab9e09cd5197ef29aca3e3fc1cdc04c0&)
 
+### Como Rodar o Projeto Localmente
 
+1. Clone o repositório:
 
-## Pré-requisitos
+```bash
+git clone https://github.com/jeressy/Gerador-de-Desaforo.git
+```
 
-- Certifique-se de ter o Python instalado em sua máquina. Você pode fazer o download em [python.org](https://www.python.org/downloads/).
+2. Navegue até o diretório do projeto:
 
-## Configuração do Ambiente
+```bash
+cd Gerador-de-Desaforo
+```
 
-1. Clone este repositório em sua máquina usando o seguinte comando no terminal:
+3. (Opcional) Crie e ative um ambiente virtual:
 
-   ```bash
-   git clone https://github.com/jeressy/Gerador-de-Desaforo.git
-   ```
-
-2. Acesse o diretório do projeto:
-
-   ```bash
-   cd Gerador-de-Desaforo
-   ```
-
-3. Crie um ambiente virtual para o projeto. Execute os seguintes comandos:
-
-   ```bash
-   python -m venv venv
-   ```
-
-   - No Windows:
-
-     ```bash
-     .\venv\Scripts\activate
-     ```
-
-   - No Linux/Mac:
-
-     ```bash
-     source venv/bin/activate
-     ```
+```bash
+python -m venv venv
+source venv/bin/activate
+```
 
 4. Instale as dependências do projeto:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-## Executando o Projeto
+5. Execute o aplicativo Flask:
 
-1. Com o ambiente virtual ativado, execute o seguinte comando para iniciar o servidor Flask:
+```bash
+python app.py
+```
 
-   ```bash
-   python app.py
-   ```
+6. Abra seu navegador e acesse [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
-2. Abra seu navegador e acesse [http://localhost:5000](http://localhost:5000).
 
-Agora você deverá ver a aplicação em execução localmente. Sinta-se à vontade para explorar e gerar xingamentos de forma recreativa.
+### Aviso
 
-## Observação
+Antes de utilizar o gerador de xingamentos, lembre-se de ler o aviso exibido na página inicial. Este gerador é estritamente para fins recreativos e de entretenimento, e a responsabilidade pelo seu uso é do usuário.
 
-Este projeto utiliza a biblioteca `requests` para fazer chamadas à API xinga.me. Certifique-se de ter conexão com a internet ao executar o projeto.
-
----
-
-Espero que essas instruções ajudem você a configurar e executar o projeto em sua máquina! Se houver algum problema ou dúvida, sinta-se à vontade para abrir uma issue no [repositório do projeto](https://github.com/jeressy/Gerador-de-Desaforo).
+Divirta-se gerando desaforos!
