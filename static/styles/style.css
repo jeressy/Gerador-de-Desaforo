@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;  
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(241, 172, 255);
+  padding: 10px 20px;
+}
+
+.nav a:hover {
+  
+  color: rgb(255, 231, 94);
+}
+
+#frase-placeholder {
+  text-align: center;
+}
+.wrapper h1{
+   
+    text-align: center;
+     
+    font-size: 50px;
+    margin-top: 15%;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.wrapper p{
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    width: 35%;
+    line-height: 1.7;
+    color: white;
+    padding: 20px 40px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.generate-button {
+  background-color: rgb(252, 252, 252);
+  color: rgb(53, 0, 66);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;  
+}
+
+.copy-button {
+  background-color:  rgb(241, 172, 255);
+  color: rgb(53, 0, 66);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px; 
+}
+
+.generate-button:hover{
+  background-color: rgb(253, 239, 175);
+  color: rgb(53, 0, 66);
+}
+
+.copy-button:hover {
+  background-color: rgb(253, 239, 175);
+  color: rgb(53, 0, 66);
+}

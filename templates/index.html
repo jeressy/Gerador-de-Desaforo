@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/animated.css') }}">
+    
+    <title>Gerador de Desaforo</title>
+</head>
+<body>
+ 
+    <div class="wrapper">
+        <div class="nav">
+           <a class="nav-link active" href="#">Fork-me no Github</a>
+        </div>
+
+        <h1>Gerador de Desaforo</h1>
+        <p id="frase-placeholder">Clique em "Gerar Frase" para obter um desaforo.</p>
+        <div class="button-container">
+            <button class="generate-button" onclick="gerarFrase()">Gerar Frase</button>
+            <button class="copy-button" onclick="copiarFrase()">Copiar</button>
+        </div>
+       
+        <div class="floating-background">
+            <div class="symbol symbol-at">@</div>
+            <div class="symbol symbol-hash">#</div>
+            <div class="symbol symbol-dollar">$</div>
+            <div class="symbol symbol-percent">%</div>
+            <div class="symbol symbol-ampersand">&</div>
+            <div class="symbol symbol-question">?</div>
+            <div class="symbol symbol-asterisk">*</div>
+            <div class="symbol symbol-exclamation">!</div>
+            <div class="symbol symbol-plus">+</div>
+
+            
+        </div>
+    </div>
+
+    <script>
+        function copiarFrase() {
+            var frase = document.getElementById('frase-placeholder').innerText;
+            navigator.clipboard.writeText(frase).then(function() {
+                alert('Frase copiada para a área de transferência!');
+            }).catch(function(err) {
+                console.error('Erro ao copiar a frase:', err);
+            });
+        }
+
+        function gerarFrase() {
+            // Faz uma requisição ao backend para obter a nova frase
+            fetch('/gerar_frase')
+                .then(response => response.json())
+                .then(data => {
+                    // Atualiza o conteúdo da frase no HTML
+                    document.getElementById('frase-placeholder').innerText = data.frase;
+                })
+                .catch(error => console.error('Erro ao obter a frase:', error));
+        }
+
+            document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                title: 'Aviso',
+                html: `
+                    <p>Este é um gerador de xingamentos desenvolvido estritamente para fins recreativos e de entretenimento. Os xingamentos gerados são fictícios e destinam-se a serem utilizados de maneira leve e humorística. No entanto, é importante reconhecer que o conteúdo gerado pode ser interpretado de maneira diferente por diferentes pessoas.</p>
+                    <p>Pedimos aos usuários que utilizem esta ferramenta com responsabilidade e considerem o impacto de suas palavras. Não é recomendado utilizar os xingamentos gerados para ofender, difamar ou prejudicar outros indivíduos.</p>
+                    <p>Por favor, esteja ciente de que a intenção é proporcionar uma experiência de diversão e não promover comportamentos negativos. Se você sentir que este gerador de xingamentos pode causar desconforto ou ofensa, recomendamos que não o utilize.</p>
+                    <p><strong>Ao utilizar esta API, você concorda em fazê-lo de forma ética, respeitando os direitos e sentimentos dos outros.</strong></p>
+
+                `,
+                icon: 'info',
+                confirmButtonText: 'Estou ciente'
+            });
+        });
+    </script>
+
+</body>
+</html>

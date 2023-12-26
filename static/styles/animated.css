@@ -1,0 +1,90 @@
+@keyframes floatingAnimation {
+    0% {
+      transform: scale(0) translateY(0) rotate(0);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1.3) translateY(-90px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .floating-background {
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .symbol {
+    
+    position: absolute;
+    font-size: 2em;
+    color: rgba(219, 219, 219, 0.548);
+    font-family: Arial, sans-serif;
+}
+
+.symbol-at {
+    top: 30%;
+    left: 10%;
+    animation: floatingAnimation 5s linear infinite, fadeInOut 7s linear infinite;
+}
+
+.symbol-hash {
+    top: 30%;
+    left: 25%;
+    animation: floatingAnimation 4s linear infinite, fadeInOut 8s linear infinite;
+}
+
+.symbol-dollar {
+    top: 30%;
+    left: 40%;
+    animation: floatingAnimation 4s linear infinite, fadeInOut 10s linear infinite;
+}
+
+.symbol-percent {
+    top: 30%;
+    left: 55%;
+    animation: floatingAnimation 6s linear infinite, fadeInOut 12s linear infinite;
+}
+
+.symbol-ampersand {
+    top: 30%;
+    left: 70%;
+    animation: floatingAnimation 4s linear infinite, fadeInOut 9s linear infinite;
+}
+
+.symbol-question {
+    top: 30%;
+    left: 85%;
+    animation: floatingAnimation 5s linear infinite, fadeInOut 7s linear infinite;
+}
+
+.symbol-asterisk {
+    top: 30%;
+    left: 100%;
+    animation: floatingAnimation 4s linear infinite, fadeInOut 5s linear infinite;
+}
+
+.symbol-exclamation {
+    top: 45%; 
+    left: 25%;
+    animation: floatingAnimation 3s linear infinite, fadeInOut 6s linear infinite;
+}
+
+.symbol-plus {
+    top: 45%;
+    left: 40%;
+    animation: floatingAnimation 5s linear infinite, fadeInOut 8s linear infinite;
+}
+
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
